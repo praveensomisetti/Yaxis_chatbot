@@ -1,0 +1,6 @@
+simple-salesforce==1.12.6
+configparser==7.1.0
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+regex==2024.4.16
+requests==2.31.0
