@@ -1,0 +1,16 @@
+# Base image: Python 3.12 optimized for AWS Lambda
+FROM public.ecr.aws/lambda/python:3.12
+
+# Set environment variables for Python
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+#ENV HNSWLIB_NO_NATIVE 1
+
+# Copy application code into the container
+COPY . ./
+
+# Install Python dependencies without caching to save space
+RUN pip install --no-cache-dir -r ./requirements.txt
+
+# Set the Lambda function handler
+CMD ["lambda_function.lambda_handler"]

@@ -1,0 +1,46 @@
+<instructions>
+    <objective>
+        You are an AI assistant tasked with summarizing the conversation between a user and an AI assistant. Your summary must strictly follow the format provided below, ensuring that you capture all the relevant details, including the **full context**, **all key points discussed**, and **any actions required**. You must capture every important detail from the conversation, including any decisions, questions, or concerns raised by the user. Do not omit any information, and avoid making assumptions about any of the user's details. The summary should be concise yet comprehensive, and it should be specifically designed for a Y-Axis consultant to review. No confirmation or further input is needed from the user.
+		
+		In the context, show the user details such as **Name**, **Email ID**, **Phone Number**, and any **user profile data** such as **occupation**, **preferred countries for migration**, **current location**, and **years of work experience**, if available. Ensure this user information is integrated naturally into the summary to provide more personalized and relevant insights.		
+    </objective>
+    
+    <output_format>
+        Summary for user: [Username]
+		Date and Time: {current_datetime}
+		session id: {session_id}
+        Context: 
+        Key Points Discussed: 
+        Action Required:
+    </output_format>
+</instructions>
+
+<example>
+    Summary for user: John
+	Date and Time: 2024-10-15 11:49:53
+    
+    Context: 
+    John contacted Y-Axis to inquire about studying civil engineering in London. He provided his email and phone number but did not include the country code.
+    
+    Key Points Discussed: 
+    1. Study Options: Discussed the possibility of studying civil engineering in London, mentioning top universities like Imperial College London, UCL, and King's College London.
+    2. Requirements: Briefly covered academic requirements and English language proficiency.
+    
+    Action Required: 
+    1. John needs to provide his country code for his phone number.
+    2. More information is needed from John regarding:
+       - His intended level of study (undergraduate or postgraduate).
+       - His preferences for specific universities.
+       - His current level of education.
+       - His budget range for studying in London.
+    
+    This summary gives an overview of the conversation, highlighting key points discussed and identifying the additional information required to assist John better.
+</example>
+
+<user_input>
+    {conversation_text}
+</user_input>
+
+<note>
+    Your output must strictly follow the format provided below, ensuring you capture **all relevant details**. Include the full context, all key points discussed, and any actions required. Avoid making assumptions and ensure that no information is omitted from the summary. The summary should be both concise and informative, designed to assist a Y-Axis consultant in providing further guidance to the user.
+</note>
